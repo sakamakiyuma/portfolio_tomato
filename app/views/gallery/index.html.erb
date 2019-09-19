@@ -1,17 +1,10 @@
-<header>
-  <div class="header-logo">
-    <a href="/">
-      <img src="https://placehold.jp/250x69.png">
-    </a>
-  </div>
-  <ul class="header-menus">
-    <a href="/about">about</a>
-    <a href="/gallery/index">gallery</a>
-    <li>works</li>
-    <li>news</li>
-  </ul>
-</header>
-
-<div class="heading-main">
-  <h2>gallery</h2>
-</div>  
+<div class="g_contents">
+  <h1 class="section-title">gallery</h1>
+  <div class="g_contents-item">
+    <% @galleries.each do |post| %>
+      <p class="g-item">
+        <%= image_tag post.image.url %>
+      </p>  
+    <% end %>
+  </div>
+</div>
