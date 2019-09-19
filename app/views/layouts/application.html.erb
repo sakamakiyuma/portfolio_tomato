@@ -4,12 +4,30 @@
     <title>PortfolioTomato</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="header">
+      <div class="header-logo">ロゴマーク</div>
+      <div class="header-list">
+        <ul>
+          <li>about</li>
+          <li>gallery</li>
+          <li>works</li>
+          <li>news</li>
+          <li>contact</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="main">
+      <%=yield%>
+    </div>  
+    <div class="footer">
+      <small class="copyright">Copyright © ○○○○ All Rights Reserved.</small>
+    </div>
   </body>
 </html>
+
+
