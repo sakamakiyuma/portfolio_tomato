@@ -43,6 +43,10 @@ form input[type="submit"] {
   font-size: 22px;
 }
 
+.header-font {
+  font-size: 22px;
+}
+
 .header {
   background-color: white;
   height: 90px;
@@ -78,11 +82,11 @@ form input[type="submit"] {
 
 /* gallery */
 .g_contents {
-  font-size: 30px;
+
 }
 
 .section-title {
-  font-size: 30px;
+  font-size: 27px;
   border-bottom: 2px solid #dee7ec;
   padding: 10px;
 }
@@ -92,8 +96,9 @@ form input[type="submit"] {
   margin: 30px 0 0 0 ;
 }
 
-.p {
+p {
   margin: 30px 10px 0 0 ;
+  float: left;
 }
 
 /* footer */

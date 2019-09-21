@@ -1,4 +1,6 @@
 class GalleryController < ApplicationController
+
+  before_action :authenticate_user,{only:[:new,:create]}
   # def index
   #   @galleries = Gallery.all.order(created_at: :desc)
   # end

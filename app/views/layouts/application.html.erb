@@ -9,14 +9,47 @@
   </head>
   <body>
     <div class="header">
-      <div class="header-logo">ロゴマーク</div>
+      <div>
+        <%= link_to("ロゴマーク","/",class: "header-logo") %>
+      </div>
       <div class="header-list">
         <ul>
-          <li>about</li>
-          <li>gallery</li>
-          <li>works</li>
-          <li>news</li>
-          <li>contact</li>
+          <% if session[:user_id] %>
+            <li>
+              <%= link_to("ログアウト","/logout",{method: :post}) %>
+            </li>
+            <li>
+              <%= link_to("about","/about",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("gallery","/gallery",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("works","/gallery",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("news","/gallery",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("contact","/gallery",class: "header-font") %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to("about","/about",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("gallery","/gallery",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("works","/gallery",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("news","/",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("contact","/",class: "header-font") %>
+            </li>
+          <% end %>  
         </ul>
       </div>
     </div>
