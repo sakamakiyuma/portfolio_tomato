@@ -14,10 +14,8 @@
       </div>
       <div class="header-list">
         <ul>
-          <% if session[:user_id] %>
-            <li>
-              <%= link_to("ログアウト","/logout",{method: :post}) %>
-            </li>
+          <% if session[:user_id] %>  
+              <%= link_to("😄","/logout",{method: :post}) %>
             <li>
               <%= link_to("about","/about",class: "header-font") %>
             </li>
@@ -28,10 +26,10 @@
               <%= link_to("works","/works",class: "header-font") %>
             </li>
             <li>
-              <%= link_to("news","/gallery",class: "header-font") %>
+              <%= link_to("news","/news",class: "header-font") %>
             </li>
             <li>
-              <%= link_to("contact","/gallery",class: "header-font") %>
+              <%= link_to("contact","/contact",class: "header-font") %>
             </li>
           <% else %>
             <li>

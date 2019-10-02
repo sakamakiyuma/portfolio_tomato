@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'contact' => "contact#index"
   get 'news' => "news#index"
+
   get 'works' => "works#index"
+  get 'works/new' => "works#new"
+  post 'works/create' => "works#create"
 
   get "login" => "users#login_form"
   post "login" => "users#login"
