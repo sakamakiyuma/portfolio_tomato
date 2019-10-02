@@ -2,11 +2,11 @@
   <div class="section-title">
     gallery
   </div>  
-  <div class="g_contents-item">
+
     <% @galleries.each do |post| %>
       <p class="g-item">
         <%= image_tag post.image.url %>
       </p>  
     <% end %>
-  </div>
+
 </div>
