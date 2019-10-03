@@ -13,6 +13,9 @@ class WorksController < ApplicationController
     @works.save!
   end
   
+  def edit
+  end
+
 private
   def permit_params
     params.require(:work).permit(:image)

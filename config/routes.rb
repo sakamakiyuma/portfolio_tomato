@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'works' => "works#index"
   get 'works/new' => "works#new"
   post 'works/create' => "works#create"
+  get "works/:id/edit" => "works#edit"
 
   get "login" => "users#login_form"
   post "login" => "users#login"
