@@ -2,7 +2,7 @@ class WorksController < ApplicationController
   before_action :authenticate_user,{only:[:new,:create]}
 
   def index
-    @works = Work.all.order(created_at: :desc)
+    @works = Work.all.order(created_at: :desc).page(params[:page]).per(1)
   end
 
   def new

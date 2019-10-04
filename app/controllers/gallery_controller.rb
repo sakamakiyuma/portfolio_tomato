@@ -22,7 +22,7 @@ class GalleryController < ApplicationController
   # end
 
   def index
-    @galleries = Gallery.all.order(created_at: :desc)
+    @galleries = Gallery.all.order(created_at: :desc).page(params[:page]).per(20)
   end
 
   def create

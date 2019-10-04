@@ -2,11 +2,10 @@
   <div class="section-title">
     gallery
   </div>  
-
-    <% @galleries.each do |post| %>
-      <p class="g-item">
-        <%= image_tag post.image.url %>
-      </p>  
-    <% end %>
-
+  <% @galleries.each do |post| %>
+    <p class="g-item">
+      <%= image_tag post.image.url %>
+    </p>  
+  <% end %>
 </div>
+<%= paginate(@galleries) %>
