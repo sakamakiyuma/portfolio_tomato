@@ -13,7 +13,8 @@ class WorksController < ApplicationController
     @works.save!
   end
   
-  def edit
+  def show
+    @work = Work.find_by(id:params[:id])
   end
 
 private

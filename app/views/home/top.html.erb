@@ -1,6 +1,64 @@
-
-  <div class="t_content">
-    <div class="top-content">
-      <img src="https://placehold.jp/800x583.png">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PortfolioTomato</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        <%= link_to("ロゴマーク","/",class: "header-logo") %>
+      </div>
+      <div class="header-list">
+        <ul>
+          <% if session[:user_id] %>  
+              <%= link_to("😄","/logout",{method: :post}) %>
+            <li>
+              <%= link_to("about","/about",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("gallery","/gallery",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("works","/works",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("news","/news",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("contact","/contact",class: "header-font") %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to("about","/about",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("gallery","/gallery",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("works","/works",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("news","/news",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("contact","/contact",class: "header-font") %>
+            </li>
+          <% end %>  
+        </ul>
+      </div>
     </div>
-  </div>
+    </div>
+    <div class="main-top">
+      <div class="t_content">
+        <img src="/top 1.jpg" width="800" height="530" class="top-img">
+      </div>
+    </div>  
+    <div class="footer-top">
+      <small class="copyright">Copyright © ○○○○ All Rights Reserved.</small>
+    </div>
+  </body>
+</html>

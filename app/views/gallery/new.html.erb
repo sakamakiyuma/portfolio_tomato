@@ -1,4 +1,5 @@
 <%= form_for :gallery, url: 'create'  do |f| %>
   <p><%=f.label "画像をアップロード" %><br><%= f.file_field :image %></p>
+  <p><%= f.text_field :gallery_title%></p>
   <p><%= f.submit value: '投稿' %></p>
 <% end %>

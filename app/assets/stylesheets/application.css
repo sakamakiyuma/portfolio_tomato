@@ -50,7 +50,7 @@ form input[type="submit"] {
 .header {
   background-color: white;
   height: 90px;
-  margin: 80px auto 30px;
+  margin: 0 auto 30px;
   width: 800px;
 }
 
@@ -68,9 +68,9 @@ form input[type="submit"] {
 }
 
 /* top main*/
-.t_main {
+.main-top {
   background-color: white;
-  height: 583px;
+  height: 530px;
   width: 800px;
   margin: 0 auto; 
 }
@@ -78,6 +78,11 @@ form input[type="submit"] {
 .t_content {
   width: 800px;
   margin: 0 auto; 
+}
+
+.top-img {
+
+  margin: 0 auto;
 }
 
 /* gallery */
@@ -114,7 +119,13 @@ p {
 .footer {
   background-color: white;
   height: 120px;
-  margin: 80px auto 30px;
+  margin: 10px auto 30px;
+  width: 800px;
+}
+
+.footer-top {
+  background-color: white;
+  margin: 30px auto 30px;
   width: 800px;
 }
 /* 
