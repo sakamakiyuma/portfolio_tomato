@@ -1,0 +1,8 @@
+<%= image_tag @gallery.image.url %>
+  <% if session[:user_id]%>
+    <%= @gallery.gallery_title%>
+    <%= link_to("編集","/gallery/#{@gallery.id}/edit") %>
+    <%= link_to("削除","/gallery/#{@gallery.id}/destroy",{method: "post"}) %>
+  <% else %>
+    <%= @gallery.gallery_title%>
+  <% end %>

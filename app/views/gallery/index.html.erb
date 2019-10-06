@@ -4,7 +4,8 @@
   </div>  
   <% @galleries.each do |post| %>
     <p class="g-item">
-      <%= image_tag post.image.url %>
+      <%= link_to image_tag(post.image.url), "/gallery/#{post.id}"%>
+        <%# <%= image_tag post.image.url %> 
     </p>  
   <% end %>
 </div>
