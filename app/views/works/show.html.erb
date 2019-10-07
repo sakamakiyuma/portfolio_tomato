@@ -1,3 +1,8 @@
-<div class="works-show-item">
-  <%= image_tag @work.image.url %>
-</div> 
+<%= image_tag @work.image.url %>
+  <% if session[:user_id] %>
+    <%= @work.work_title %>
+    <%= link_to("編集","/works/#{@work.id}/edit") %>
+    <%= link_to("削除","/works/#{@work.id}/destroy",{method: "post"}) %>
+  <% else %>
+    <%= @work.work_title%>
+  <% end %>

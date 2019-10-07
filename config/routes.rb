@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get 'works/new' => "works#new"
   post 'works/create' => "works#create"
   get "works/:id" => "works#show"
+  get "works/:id/edit" => "works#edit"
+  post "works/:id/update" => "works#update"
+  post "works/:id/destroy" => "works#destroy"
 
   get "login" => "users#login_form"
   post "login" => "users#login"

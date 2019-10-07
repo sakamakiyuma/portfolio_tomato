@@ -1,0 +1,7 @@
+<%= form_tag("/works/#{@work.id}/update", {multipart: true}) do %>
+  <p>画像</p>
+    <input name="image" type="file">
+  <p>作品名</p>
+    <input name="work_title" value="<%= @work.work_title %>">
+    <input type="submit" value="変更する">
+<% end %>
