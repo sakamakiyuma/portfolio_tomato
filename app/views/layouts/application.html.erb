@@ -9,13 +9,12 @@
   </head>
   <body>
     <div class="header">
-      <div>
-        <%= link_to("ロゴマーク","/",class: "header-logo") %>
-      </div>
       <div class="header-list">
         <ul>
           <% if session[:user_id] %>  
-              <%= link_to("😄","/logout",{method: :post}) %>
+            <li class = "logo">
+              <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
+            </li>
             <li>
               <%= link_to("about","/about",class: "header-font") %>
             </li>
@@ -31,7 +30,11 @@
             <li>
               <%= link_to("contact","/contact",class: "header-font") %>
             </li>
+            <%= link_to("😄現在ログイン中(管理者画面はコチラをクリック) 😄","/logout",{method: :post}) %>
           <% else %>
+            <li class = "logo">
+              <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
+            </li>
             <li>
               <%= link_to("about","/about",class: "header-font") %>
             </li>
