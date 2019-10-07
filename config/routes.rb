@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get "gallery/:id" => "gallery#show"
   get "gallery/:id/edit" => "gallery#edit"
   post "gallery/:id/destroy" =>"gallery#destroy"
+  post "gallery/:id/update" => "gallery#update"
 
   get "/" => "home#top"
   get "about" => "home#about"

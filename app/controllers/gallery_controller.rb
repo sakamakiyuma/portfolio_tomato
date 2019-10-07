@@ -1,6 +1,6 @@
 class GalleryController < ApplicationController
 
-  before_action :authenticate_user,{only:[:new,:create]}
+  before_action :authenticate_user,{only:[:new,:create,:edit,:update,:destroy]}
   # def index
   #   @galleries = Gallery.all.order(created_at: :desc)
   # end
@@ -38,9 +38,15 @@ class GalleryController < ApplicationController
   end
 
   def edit
+    @gallery = Gallery.find_by(id: params[:id])
   end
 
   def update
+    @gallery = Gallery.find_by(id: params[:id])
+    @gallery.image = params[:image]
+    @gallery.gallery_title = params[:gallery_title]
+    @gallery.save!
+    redirect_to("/")
   end
   
   def destroy
