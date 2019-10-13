@@ -30,38 +30,21 @@
             <li>
               <%= link_to("contact","/contact",class: "header-font") %>
             </li>
-            <%= link_to("😄現在ログイン中(管理者画面はコチラをクリック) 😄","/management") %>
-          <% else %>
-            <li class = "logo">
-              <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
-            </li> 
-              <li>
-                <%= link_to("about","/about",class: "header-font") %>
-              </li>
-              <li>
-                <%= link_to("gallery","/gallery",class: "header-font") %>
-              </li>
-              <li>
-                <%= link_to("works","/works",class: "header-font") %>
-              </li>
-              <li>
-                <%= link_to("news","/news",class: "header-font") %>
-              </li>
-              <li>
-                <%= link_to("contact","/contact",class: "header-font") %>
-              </li>
-          <% end %>  
+          <% end %>
         </ul>
       </div>
     </div>
     </div>
-    <div class="main-top">
-      <div class="t_content">
-        <img src="/top 1.jpg" width="800" height="530" class="top-img">
+    <div class="main-management">
+      <div class="m_content">
+        <div class="m-manu">
+          <ul>
+            <li><%= link_to("gallery画像投稿","/gallery/new") %></li>
+            <li><%= link_to("work画像投稿","/works/new") %></li>
+            <li><%= link_to("news投稿","/")%></li>
+            <li><%= link_to("ログアウト","/logout",{method: :post})%></li>
+          </ul>
       </div>
     </div>  
-    <div class="footer-top">
-      <small class="copyright">Copyright © ○○○○ All Rights Reserved.</small>
-    </div>
   </body>
 </html>
