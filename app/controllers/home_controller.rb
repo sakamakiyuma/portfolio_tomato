@@ -5,4 +5,9 @@ class HomeController < ApplicationController
 
   def about
   end
+
+  def management
+    render layout: false
+  end
+
 end
