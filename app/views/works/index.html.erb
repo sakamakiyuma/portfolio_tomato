@@ -5,8 +5,8 @@
   <div class="g_contents-item">
     <% @works.each do |post| %>
       <p class="g-item">
-        <%= link_to image_tag(post.image.url), "/works/#{post.id}" %>
-      </p>  
+        <%= link_to image_tag(post.image.url, :size => "140x112"), post.image.url, :'data-lightbox' => post.id %>
+      </p>    
     <% end %>
   </div>
     <%= paginate(@works) %>
