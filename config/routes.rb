@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "home#top"
   get 'contact' => "contact#index"
   get 'news' => "news#index"
 

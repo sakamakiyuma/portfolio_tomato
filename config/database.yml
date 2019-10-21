@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
-  database: portfolio_tomato_production
-  username: portfolio_tomato
-  password: <%= ENV['PORTFOLIO_TOMATO_DATABASE_PASSWORD'] %>
+  # database: portfolio_tomato_production
+  # username: portfolio_tomato
+  # password: <%= ENV['PORTFOLIO_TOMATO_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
