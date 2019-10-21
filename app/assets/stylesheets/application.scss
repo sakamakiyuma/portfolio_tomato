@@ -43,7 +43,14 @@ form input[type="submit"] {
   float: left;
   padding: 33px 14px 20px ;
   font-size: 22px;
-  position:relative;
+  position: relative;
+  color: black;
+}
+.header-list li:nth-of-type(1){
+  margin-top: 10px;
+}
+.header-list li:nth-of-type(6){
+  margin-top: 14px;
 }
 
 .logo {
@@ -53,9 +60,16 @@ form input[type="submit"] {
   right:15px;
 }
 
-.header-font {
-  font-size: 22px;
+a.header-font {
+  font-size: 35px;
+  color: black;
+  font-family: 'Amatic SC', cursive;
+
 }
+a.header-font:hover{
+  opacity: 0.6;
+  color: black;
+  }
 
 .header {
   background-color: white;
@@ -91,19 +105,25 @@ form input[type="submit"] {
 }
 
 .top-img {
-
   margin: 0 auto;
 }
-
+// about
+.about-text{
+  margin-top: 40px;
+}
 /* gallery */
-.g_contents {
-
+.main-gallery {
+  width: 860px;
+  height: 720px;
+  margin: 0 auto;
+  background-color: white;
 }
 
 .section-title {
-  font-size: 27px;
+  font-size: 42px;
   border-bottom: 2px solid #dee7ec;
   padding: 10px;
+  font-family: 'Amatic SC', cursive;
 }
 
 
@@ -115,10 +135,59 @@ p {
 
 
 /* contact */
-.contact_message {
-  font-size: 20px;
+.fa-black {
+  color: black;
+}
+
+.header-c {
+  background-color: white;
+  height: 90px;
+  margin: 30px auto 94px;
+  width: 800px;
+}
+
+.contact-main {
+height: 380px;
+width: 860px;
+margin: 0 auto;
   
-  padding-top: 50px;
+}
+
+.top-text {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.low-box1 {
+  float: left;
+  width: 43%;
+  height: 100px;
+  border: solid #EEEEEE;
+  border-radius: 15px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.low-box2 {
+  float: left;
+  width: 45%;
+  height: 100px;
+  border: solid #EEEEEE;
+  border-radius: 15px;
+}
+
+
+
+.box-content{
+  margin: 33px auto;
+}
+.box-content span{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.contact-font{
+  font-size: 24px;
+  font-family: Comic Sans MS;
 }
 /* footer */
 .pagination {
@@ -138,64 +207,17 @@ p {
   margin: 30px auto 30px;
   width: 800px;
 }
-/* 
+
 .copyright {
 
-  padding: 10px 0 0 250px; 
+  font-family: 'Amatic SC', cursive;
 
-} */
-/*modalwindow */
-#close {
-  cursor: pointer;
-  width: 200px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: center;
-  padding: 12px 0;
-  margin: 113px auto 0;
-}
-
-#mask {
-  background: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-}
-
-#modal {
-  background: #fff;
-  width: 300px;
-  padding: 20px;
-  border-radius: 4px;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  transition: 0.8s;
-  z-index: 2;
-}
-
-#modal p {
-  margin: 0 0 20px;
-}
-
-#mask.hidden {
-  display: none;
-}
-
-#modal.hidden {
-  transform: translate(0, -500px);
 } 
 
 /* *= require 'css/lightbox' */
 
-/*
- *= require font-awesome
- */
 
-@import url("gallery.css");
+
+
 @import "font-awesome";
+@import "bootstrap";

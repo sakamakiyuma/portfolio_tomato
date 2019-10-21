@@ -23,6 +23,7 @@ class GalleryController < ApplicationController
 
   def index
     @galleries = Gallery.all.order(created_at: :desc).page(params[:page]).per(20)
+    render layout: false
   end
 
   def new
