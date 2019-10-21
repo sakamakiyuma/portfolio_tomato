@@ -1,28 +1,101 @@
-<%# <div class="g_contents">
-  <div class="section-title">
-    contact
-  </div>
-  <div class="contact_form" id ="page_style">
-    ご連絡、お仕事のお問合せはお気軽にご連絡ください
-    <div class="wpcf7" id ="wpc7-f10">
-      <form class="wpc7-form">
-        <p>お名前(必須)<br>
-          <input type="text">
-        </p>
-        <p>メールアドレス(必須)<br>
-          <input type="text">
-        </p>  
-        <p>題名<br>
-          <input type="text">
-        </p> 
-        <p>メッセージ本文<br>
-          <textarea></textarea>
-        </p> 
-      </form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TomaToTmayu</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+    
+  </head>
+  <body>
+    <div class="header-c">
+      <div class="header-list">
+        <ul>
+          <% if session[:user_id] %>  
+            <li class = "logo">
+              <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
+            </li>
+            <li>
+              <%= link_to("home","/",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("about","/about",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("gallery","/gallery",class: "header-font") %>
+            </li>
+            <%# <li> %>
+              <%# <%= link_to("works","/works",class: "header-font") %> 
+            <%# </li> %>
+            <%# <li>
+              <%= link_to("news","/news",class: "header-font") %>
+            <%# </li> %>
+            <li>
+              <%= link_to("contact","/contact",class: "header-font") %>
+            </li>
+            <%= link_to("😄現在ログイン中(管理者画面はコチラをクリック) 😄","/management") %>
+          <% else %>
+            <li class = "logo">
+              <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
+            </li>
+            <li>
+              <%= link_to("home","/",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("about","/about",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("gallery","/gallery",class: "header-font") %>
+            </li>
+            <%# <li> %>
+              <%# <%= link_to("works","/works",class: "header-font") %> 
+            <%# </li> %>
+            <%# <li>
+              <%= link_to("news","/news",class: "header-font") %>
+            <%# </li> %> 
+            <li>
+              <%= link_to("contact","/contact",class: "header-font") %>
+            </li>
+            <li>  
+              <%= link_to fa_icon("instagram 2x",class: "fa-black"),"https://www.instagram.com/tomatomayu/?hl=ja" %>
+            </li>
+          <% end %>  
+        </ul>
+      </div>
     </div>
-  </div>
-</div> %>
-
-<div>
-  <%= fa_icon 'quote-right' %>
-</div>
+    </div>
+    <div class="contact-main">
+      <div class = "contact-top">
+        <div class = "top-text">
+          <h4>お問い合わせは以下からお願いします。
+          </h4>
+        </div>
+      </div>
+      <div class = "contact-low">
+        <div class = "low-box1">
+          <div class= "box-content">
+            <span class="contact-font">
+              <%= link_to fa_icon("instagram 2x",class: "fa-black"),"https://www.instagram.com/tomatomayu/?hl=ja" %>
+              instagram
+            </span>  
+          </div>
+        </div>
+        <div class = "low-box2">
+          <div class= "box-content"> 
+            <span class="contact-font">
+              <%= fa_icon("envelope",) %>
+              sakayu412@gmail.com
+            </span>  
+          </div>
+        </div>
+      </div>
+      
+    </div>  
+    <div class="footer">
+      <small class="copyright">Copyright © TomaTomayu All Rights Reserved.</small>
+    </div>
+  </body>
+</html>

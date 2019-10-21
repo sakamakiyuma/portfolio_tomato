@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PortfolioTomato</title>
+    <title>TomaToTmayu</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
   </head>
   <body>
     <div class="header">
@@ -33,6 +34,9 @@
             <li>
               <%= link_to("contact","/contact",class: "header-font") %>
             </li>
+            <li>
+              <%= link_to fa_icon("instagram 2x",class: "fa-black"),"https://www.instagram.com/tomatomayu/?hl=ja" %>
+            </li>  
             <%= link_to("😄現在ログイン中(管理者画面はコチラをクリック) 😄","/management") %>
           <% else %>
             <li class = "logo">
@@ -56,6 +60,9 @@
               <li>
                 <%= link_to("contact","/contact",class: "header-font") %>
               </li>
+              <li>
+                <%= link_to fa_icon("instagram 2x",class: "fa-black"),"https://www.instagram.com/tomatomayu/?hl=ja" %>
+              </li> 
           <% end %>  
         </ul>
       </div>
