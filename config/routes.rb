@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   post "login" => "users#login"
   post "logout" => "users#logout"
 
-  get "gallery" => "gallery#index"
+  get "gallery1" => "gallery#index1"
+  get "gallery2" => "gallery#index2"
+  get "gallery3" => "gallery#index3"
   get "gallery/new" => "gallery#new"
   post "gallery/create" => "gallery#create"
   get "gallery/:id" => "gallery#show"

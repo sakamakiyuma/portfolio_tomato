@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TomaTomayu</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-list">
+        <ul>
+          <% if session[:user_id] %>  
+            <li class = "logo">
+              <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
+            </li>
+            <li>
+              <%= link_to("home","/",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("about","/about",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("gallery","/gallery1",class: "header-font") %>
+            </li>
+            <%# <li> %>
+              <%# <%= link_to("works","/works",class: "header-font") %> 
+            <%# </li> %>
+            <%# <li>
+              <%= link_to("news","/news",class: "header-font") %>
+            <%# </li> %>
+            <li>
+              <%= link_to("contact","/contact",class: "header-font") %>
+            </li>
+            <%= link_to("😄現在ログイン中(管理者画面はコチラをクリック) 😄","/management") %>
+          <% else %>
+            <li class = "logo">
+              <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
+            </li>
+            <li>
+              <%= link_to("home","/",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("about","/about",class: "header-font") %>
+            </li>
+            <li>
+              <%= link_to("gallery","/gallery1",class: "header-font") %>
+            </li>
+            <%# <li> %>
+              <%# <%= link_to("works","/works",class: "header-font") %> 
+            <%# </li> %>
+            <%# <li>
+              <%= link_to("news","/news",class: "header-font") %>
+            <%# </li> %> 
+            <li>
+              <%= link_to("contact","/contact",class: "header-font") %>
+            </li>
+            <li>  
+              <%= link_to fa_icon("instagram 2x",class: "fa-black"),"https://www.instagram.com/tomatomayu/?hl=ja" %>
+            </li>
+          <% end %>  
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="main-gallery">
+      <div class="g_contents">
+        <div class="section-title">
+          gallery
+        </div>  
+          <a href="t.gallery/21.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/21.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/22.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/22.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/23.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/23.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/24.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/24.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/25.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/25.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          
+          <a href="t.gallery/26.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/26.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/27.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/27.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/28.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/28.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/29.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/29.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/30.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/30.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+
+          <a href="t.gallery/31.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/31.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/32.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/32.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/33.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/33.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/34.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/34.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/35.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/35.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+
+
+          <a href="t.gallery/36.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/36.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/37.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/37.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/38.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/38.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/39.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/39.jpg" alt="hoge画像" height="140"width="140">
+          </a>
+          <a href="t.gallery/40.jpg" data-lightbox="fuga" data-title="hoge" class="g-item">
+            <img src="t.gallery/40.jpg" alt="hoge画像" height="140"width="140">
+          </a>  
+    </div>
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="gallery1">Prev</a></li>
+        <li class="page-item"><a class="page-link" href="gallery1">1</a></li>
+        <li class="page-item"><a class="page-link" href="gallery2">2</a></li>
+        <li class="page-item"><a class="page-link" href="gallery3">3</a></li>
+        <li class="page-item"><a class="page-link" href="gallery3">Next<</a></li>
+      </ul>
+    </nav>
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+    </div>  
+    <div class="footer">
+      <small class="copyright">Copyright © TomaTomayu All Rights Reserved.</small>
+    </div>
+  </body>
+</html>

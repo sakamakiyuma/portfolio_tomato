@@ -1,28 +1,13 @@
 class GalleryController < ApplicationController
 
   before_action :authenticate_user,{only:[:new,:create,:edit,:update,:destroy]}
-  # def index
-  #   @galleries = Gallery.all.order(created_at: :desc)
-  # end
-
-  # def show
-  #   @gallery= Gallery.find_by(id: params[:id])
-  # end
-
-  # def new
-  # end
-
-  # def create
-  #   Gallery.create(gallery_params)
-  # end
-  
-  # private
-  # def gallery_params
-  #   params.permit(:image)
-  # end
-
-  def index
-    @galleries = Gallery.all.order(created_at: :desc).page(params[:page]).per(20)
+  def index1
+    render layout: false
+  end
+  def index2
+    render layout: false
+  end
+  def index3
     render layout: false
   end
 
