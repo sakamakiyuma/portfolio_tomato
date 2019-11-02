@@ -115,6 +115,15 @@ a.header-font:hover{
 // about
 .about-text{
   margin-top: 40px;
+  font-family: "Kokoro";
+  width:65%;
+  float: right;
+}
+
+.icon-about {
+  border: solid 	#EEEEEE;
+  border-radius: 100px;
+  margin: 75px 0 0 40px;
 }
 /* gallery */
 .main-gallery {
@@ -299,7 +308,7 @@ margin: 0 auto;
     font-size: 30px;
   }
   .g-item{
-    margin-left: 40px;
+    margin-left: 30px;
   }
   .footer-top{
     margin-top: 70px;
@@ -312,6 +321,22 @@ margin: 0 auto;
 
   .box-content{
     text-align: center;
+  }
+
+  .about-text{
+    font-family: "Kokoro";
+    text-align: center;
+
+  }
+  
+  .icon-about {
+    border: solid 	#EEEEEE;
+    border-radius: 100px;
+    margin-left: 116px;
+  }
+  
+  .top-text{
+    display:none;
   }
 }
 @import "font-awesome";
