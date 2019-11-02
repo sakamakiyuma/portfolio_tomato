@@ -8,11 +8,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   </head>
   <body>
     <div class="header">
       <div class="header-list">
-        <ul>
+        
           <% if session[:user_id] %>  
             <li class = "logo">
               <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
@@ -38,7 +39,7 @@
             <%= link_to("😄現在ログイン中(管理者画面はコチラをクリック) 😄","/management") %>
           <% else %>
             <li class = "logo">
-              <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
+                <%= link_to image_tag("/logo.jpg",height: "50",width:"280"), "/" %>
             </li>
             <li>
               <%= link_to("home","/",class: "header-font") %>
@@ -62,7 +63,7 @@
               <%= link_to fa_icon("instagram 2x",class: "fa-black"),"https://www.instagram.com/tomatomayu/?hl=ja" %>
             </li>
           <% end %>  
-        </ul>
+          </ul>
       </div>
     </div>
     </div>

@@ -1,5 +1,5 @@
 /* reset ================================ */
-* {
+@media screen and (min-width: 767px){* {
   box-sizing: border-box;
 }
 
@@ -58,6 +58,11 @@ form input[type="submit"] {
   position: absolute;
   bottom: 10px;
   right:15px;
+}
+.logo1{
+  width:280px;
+  height:50px;
+  position:10px 0 0 10px;
 }
 
 a.header-font {
@@ -213,11 +218,101 @@ margin: 0 auto;
   font-family: 'Amatic SC', cursive;
 
 } 
+}
 
-/* *= require 'css/lightbox' */
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+  html {
+    font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+  
+  ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #2d3133;
+    font-size: 14px;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  
+  input {
+    background-color: transparent;
+    outline-width: 0;
+  }
+  
+  form input[type="submit"] {
+    border: none;
+    cursor: pointer;
+  }
 
+  // ヘッダー
 
+  .header-list  {
+    list-style: none;
+    float: left;
+    font-size: 22px;
+    position: relative;
+    color: black;
+    text-align: center;
+    width: 100%;
+  }
+  .top-img {
+    height:370px;
+    width:414px;
+  }
 
+  a.header-font{
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+  }
+  a.header-font:hover{
+    opacity: 0.6;
+    color: black;
+    }
 
+  .logo1{
+    text-align: center;
+    height: 80px;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .logo{
+    text-align: center;
+  }
+  
+  .fa-2x{
+    color: black;
+  }
+  .section-title{
+    margin-left: 40px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+  }
+  .g-item{
+    margin-left: 40px;
+  }
+  .footer-top{
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+  .footer{
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+
+  .box-content{
+    text-align: center;
+  }
+}
 @import "font-awesome";
 @import "bootstrap";
