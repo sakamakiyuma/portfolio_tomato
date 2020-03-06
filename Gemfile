@@ -71,7 +71,7 @@ gem 'jquery-rails'
 
 gem 'font-awesome-rails'
 
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 
 group :production do
   gem 'pg'
